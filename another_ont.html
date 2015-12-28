@@ -1,0 +1,3174 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Index Page | TD Assets Management.</title>
+<link rel="shortcut icon" href="/includes/styles/images/ui/favicon.ico" type="image/vnd.microsoft.icon">
+<link type="text/css" href="/includes/styles/default.css" rel="stylesheet">
+<link type="text/css" href="/includes/styles/print.css" rel="stylesheet" media="print">
+<link type="text/css" href="/includes/styles/custom/tdam_custom.css" rel="stylesheet">
+
+<!-- Common JS -->
+<script type="text/javascript" src="/includes/javascript/jquery/jquery.js"></script>
+<script type="text/javascript" src="/includes/javascript/jquery/jquery.metadata.js"></script>
+<script type="text/javascript" src="/includes/javascript/default.js"></script>
+<script type="text/javascript" src="/includes/javascript/page/tdam-fund-custom.js"></script>
+<script type="text/javascript" src="/includes/javascript/page/fundProfileFilter.js"></script>
+
+<script>
+	function filter()
+	{
+		var formAction ='fundProfile.form';
+    	$('#searchfilter').attr('action',formAction);
+		$('#searchfilter').submit(); 	
+		
+	}
+	
+	function setInputControlId(controlId)
+	{
+		if(controlId=="Price"){
+			document.getElementById("Price").focus();
+		}
+		else if(controlId=="Performance"){
+			document.getElementById("Performance").focus();
+		}
+		else if(controlId=="Distributions"){
+			document.getElementById("Distributions").focus();
+		}
+	}
+</script>
+<style>
+	table{table-layout:fixed; word-wrap:normal}
+	table td:first-child{width:365px;}	
+</style>
+</head>
+<body class="td-os-complete td-JS-enabled">
+<input type="hidden" id="TabName" value="">
+<div id="td-wrapper" class="td-layout-grid14">
+  <div id="td-container">
+  	<div class="td-layout-row" id="td-layout-contentarea">
+      <div class="td-layout-column td-layout-column-first td-layout-column-last">
+        <div class="td-layout-row">
+          <div class="td-layout-column  td-layout-grid14 td-layout-column-first td-layout-column-last">
+               
+              <div class="td-layout-row">
+              <div class="td-layout-column td-layout-grid14 td-layout-column-first td-layout-column-last">
+                
+
+
+
+
+<script type="text/javascript" src="includes/javascript/page/fundProfileFilter.js"></script>
+
+<style type="text/css">
+#searchfilter input[type="radio"] {
+top: 3px !important;
+}
+</style>
+
+<script>
+
+$(document).ready(function() {
+
+selectedControlId = 'null';
+if(selectedControlId == "null") {
+  selectedControlId = "";
+}
+
+ if(selectedControlId =="productGroup") {
+ 	document.getElementById("productGroup").focus();
+ 	//$("select#productGroup").focus().val($("#productGroup").val());
+ 	//document.getElementById("productGroup").options[document.getElementById("productGroup").selectedIndex].value.focus();
+ }
+ else if(selectedControlId =="managerID"){
+ 	document.getElementById("managerID").focus();
+ 	//("select#managerID").focus().val($("#managerID").val());
+ }
+ $("select#productGroup").find('option[value="'+$("#productGroupName").val()+'"]').attr("selected","selected");
+ 
+ $("select#productGroup").change(function() {
+	 selectedControlId = "productGroup";
+	 document.getElementById("selectedControlId").value ="productGroup";
+	 $("#productGroupName").attr("value",$('#productGroup').val());
+	 $("form#searchfilter").attr("method","GET");
+	 $("form#searchfilter").submit();
+ });
+ 
+ $("select#managerID").change(function() {
+	selectedControlId = "managerID";
+	document.getElementById("managerID").focus();
+ });
+ 
+});
+
+</script>
+<div class="td-layout-column td-layout-grid14 td-margin-top-medium td-layout-column-first">
+  <form id="searchfilter" action="fundProfile.form" method="POST">
+   <input id="productGroupName" name="productGroupName" type="hidden" value="TD Mutual Funds">
+   <input id="productGroupNameFR" name="productGroupNameFR" type="hidden" value="Fonds Mutuels TD">
+    <input id="path" name="path" type="hidden" value="">
+    <input id="site" name="site" type="hidden" value="TDCT">
+    <input id="productGroupId" name="productGroupId" type="hidden" value="1">
+    <input id="lang" name="lang" type="hidden" value="en">
+    <input id="selectedControlId" name="selectedControlId" type="hidden" value="">
+    <span style="display:none;"><h1>TD Mutual Fund Prices</h1></span>
+    <div class="td-layout-row td-margin-bottom-large">
+	    
+	    	<span style="display:none;"><label for="productGroup">Search by mutual fund family</label></span>          
+	  		<select id="productGroup" size="1">	 
+			   
+			    <option value="TD Mutual Funds" selected="selected">TD Mutual Funds </option>
+			  
+			    <option value="TD Managed Assets Program">TD Managed Assets Program </option>
+			  
+			    <option value="TD Comfort Portfolios">TD Comfort Portfolios </option>
+			  
+	 		</select>
+	     
+    </div>
+    <div class="td-layout-row td-margin-bottom-large">
+		<strong> Refine your result  </strong>
+	</div>	
+    <div class="td-layout-row" id="mapOfProdIdAndMsg" style="display:none;">
+       	
+       	            	    
+			
+			        	      
+   			<input type="hidden" value="D-Series" ids="productIdJs_D-Series"> 
+   			<input type="hidden" value="&lt;p&gt;&lt;b&gt;D-Series (-D)&lt;/b&gt;&lt;br&gt;
+
+Investors transacting on a no-load basis who want to complete their transactions through TD Direct Investing, a division of TD Waterhouse Canada Inc., or other discount brokers.&lt;/p&gt;" ids="messageOfProdJs_D-Series" class="messageOfProd">
+   			<input type="hidden" value="" ids="productTitle_D-Series"> 
+   			<input type="hidden" value="" ids="productLink_D-Series"> 
+		
+       	            	    
+			
+			        	      
+   			<input type="hidden" value="Premium &amp; K Series" ids="productIdJs_PremiumKSeries"> 
+   			<input type="hidden" value="&lt;p&gt;&lt;b&gt;Premium Series&lt;/b&gt;&lt;br&gt;
+
+For large investors and others who make the required minimum investment, as determined by TDAM from time to time.&lt;/p&gt;&lt;p&gt;&lt;b&gt;K-Series&lt;/b&gt;&lt;br&gt;
+
+Large investors and others who make the required minimum investment, as determined by TDAM from time to time who wish to receive a regular monthly cash flow from a Fund. Distributions will consist of net income, net realized capital gains and/or a return of capital monthly.&lt;/p&gt;
+" ids="messageOfProdJs_PremiumKSeries" class="messageOfProd">
+   			<input type="hidden" value="2015 Target Distributions" ids="productTitle_PremiumKSeries"> 
+   			<input type="hidden" value="https://www.tdassetmanagement.com/document/PDF/advantage-investment-portfolio/Target Rate Distribution FP ROC Final.pdf" ids="productLink_PremiumKSeries"> 
+		
+       	            	    
+			
+			        	      
+   			<input type="hidden" value="Investor &amp; H Series" ids="productIdJs_InvestorHSeries"> 
+   			<input type="hidden" value="&lt;p&gt;&lt;b&gt;Investor (-I)&lt;/b&gt;&lt;br&gt;For clients investing on a no-load basis.&lt;/p&gt;&lt;p&gt;&lt;b&gt;H-Series (-H)&lt;/b&gt;&lt;br&gt;Investors purchasing on a “no-load” basis who wish to receive a regular monthly cash flow from a Fund. Distributions will consist of net income, net realized capital gains and/or a return of capital monthly. If the distributions in a year are less than the Fund's net income and net realized capital gains for the year, the Fund will make an additional distribution in December.&lt;/p&gt;" ids="messageOfProdJs_InvestorHSeries" class="messageOfProd">
+   			<input type="hidden" value="2015 Target Distributions" ids="productTitle_InvestorHSeries"> 
+   			<input type="hidden" value="https://www.tdassetmanagement.com/document/PDF/advantage-investment-portfolio/Target Rate Distribution FP ROC Final.pdf" ids="productLink_InvestorHSeries"> 
+		
+       	            	    
+			
+			        	      
+   			<input type="hidden" value="Investor &amp; Premium" ids="productIdJs_InvestorPremium"> 
+   			<input type="hidden" value="&lt;p&gt;&lt;b&gt;Investor (-I)&lt;/b&gt;&lt;br&gt;For clients investing on a no-load basis.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Premium (-P)&lt;/b&gt;&lt;br&gt;For large investors and others who make the required minimum investment, as determined by TDAM from time to time.&lt;/p&gt;" ids="messageOfProdJs_InvestorPremium" class="messageOfProd">
+   			<input type="hidden" value="2015 Target Distributions" ids="productTitle_InvestorPremium"> 
+   			<input type="hidden" value="https://www.tdassetmanagement.com/document/PDF/advantage-investment-portfolio/Target Rate Distribution FP ROC Final.pdf" ids="productLink_InvestorPremium"> 
+		
+       	            	    
+			
+			        	      
+   			<input type="hidden" value="F, Premium F &amp; S Series" ids="productIdJs_F,PremiumFSSeries"> 
+   			<input type="hidden" value="&lt;p&gt;&lt;b&gt;F-Series (-F)&lt;/b&gt;&lt;br&gt;For clients participating in programs that usually do not require the payment of sales or redemption transaction charges by investors or payment of service fees by TDAM.
+
+Potential investors include clients of “fee-for-service” Financial Advisors, clients with dealer-sponsored “wrap accounts” and others who pay an annual fee to their dealer or Financial Advisor instead of transactional sales charges.&lt;/p&gt;&lt;p&gt;&lt;b&gt;S-Series (-S)&lt;/b&gt;&lt;br&gt;For clients who wish to receive a regular monthly cash flow from a Fund, while participating in programs that usually do not require the payment of sales or redemption transaction charges by investors, or payment of service fees by TDAM. Distributions will consist of net income, net realized capital gains and/or a return of capital monthly. If the distributions in a year are less than the Fund's net income and net realized capital gains for the year, the Fund will make an additional distribution in December.
+
+Potential investors include clients of “fee-for-service” Financial Advisors, clients with dealer-sponsored “wrap accounts”, and others who pay an annual fee to their dealer or Financial Advisor instead of transactional sales charges.&lt;/p&gt;&lt;b&gt;Premium F-Series (-PF)&lt;/b&gt;&lt;p&gt;For large investors participating in programs that usually do not require the payment of sales or redemption transaction charges by investors or payment of service fees by TDAM and who meet the minimum investment requirement, as determined by TDAM from time to time. Potential investors include clients of “fee-for-service” Financial Advisors, client with dealer-sponsored “wrap accounts”, and others who pay an annual fee to their dealer instead of transactional sales charges.&lt;/p&gt;" ids="messageOfProdJs_F,PremiumFSSeries" class="messageOfProd">
+   			<input type="hidden" value="2015 Target Distributions" ids="productTitle_F,PremiumFSSeries"> 
+   			<input type="hidden" value="https://www.tdassetmanagement.com/document/PDF/advantage-investment-portfolio/Target Rate Distribution AD ROC Final.pdf" ids="productLink_F,PremiumFSSeries"> 
+		
+       	            	    
+			
+			        	      
+   			<input type="hidden" value="Advisor &amp; T Series" ids="productIdJs_AdvisorTSeries"> 
+   			<input type="hidden" value="&lt;p&gt;&lt;b&gt;Advisor Series (-A)&lt;/b&gt;&lt;br&gt;For clients seeking investment advice and purchasing under a front-end load, back-end load or low-load option.&lt;/p&gt;&lt;p&gt;&lt;b&gt;T-Series (-T)&lt;/b&gt;&lt;br&gt;For clients who wish to receive a regular monthly cash flow from a Fund, while seeking investment advice and purchasing under a front-end, back-end or low-load option. Distributions will consist of net income, net realized capital gains and/or a return of capital monthly and net realized capital gains annually in December.&lt;/p&gt;" ids="messageOfProdJs_AdvisorTSeries" class="messageOfProd">
+   			<input type="hidden" value="2015 Target Distributions" ids="productTitle_AdvisorTSeries"> 
+   			<input type="hidden" value="https://www.tdassetmanagement.com/document/PDF/advantage-investment-portfolio/Target Rate Distribution AD ROC Final.pdf" ids="productLink_AdvisorTSeries"> 
+		
+       	            	    
+			
+			        	      
+   			<input type="hidden" value="e-Series" ids="productIdJs_e-Series"> 
+   			<input type="hidden" value="&lt;p&gt;&lt;b&gt;e-Series (-e)&nbsp;&lt;/b&gt;&lt;br&gt;Investors transacting on a no-load basis who want to complete their transactions electronically.&lt;/p&gt;" ids="messageOfProdJs_e-Series" class="messageOfProd">
+   			<input type="hidden" value="" ids="productTitle_e-Series"> 
+   			<input type="hidden" value="" ids="productLink_e-Series"> 
+		
+	</div> 
+		
+	<div class="td-layout-row">		
+    <div class="td-layout-column td-layout-grid3 td-layout-column-first">
+    
+    <div id="radioDiv" class="td-layout-column td-margin-bottom-medium td-layout-column-first td-layout-column-last td-layout-gird3">
+        
+     <div class="td-margin-bottom-medium"><strong> By Series </strong>
+        <div class="td-callout td-callout-primary td-cs-tertiary td-overlay td-layout-column td-layout-grid5" id="TDCONTEXTHELP" aria-live="polite" style="display: none; opacity: 0; "><a class="td-link-icon td-link-icon-close" href="#">Close details</a>
+		    <div class="td-callout-content">
+		        <p class="td-copy-sub knowaAboutProduct"><p><b>Investor (-I)</b><br>For clients investing on a no-load basis.</p><p><b>Premium (-P)</b><br>For large investors and others who make the required minimum investment, as determined by TDAM from time to time.</p></p>  
+		    </div>
+		<a class="td-link-icon td-link-icon-exit" href="#">Close details</a></div>        
+		<a style="border:none;" class="td-link-dottedunderlinehover td-link-overlay {offsetx:-40,offsety:-5,position:'downwardright',triggertype:'mouseover',targetelement:'#TDCONTEXTHELP',closetext:'Close details',opentext:'View Details'}" href="#"><span class="td-forscreenreader">View Details</span>
+        <img alt="Help with searching by Series" src="images/icon-help.gif" border="0" style="vertical-align:top;"></a>         
+     </div>
+     
+            
+     <div class="td-layout-grid3 td-floatleft  td-margin-bottom-none">
+        <!--
+        	<span style="display:none;"><label for ="fundSeriesGroupID1">Search prices in Investor & Premium</label></span>
+            <input id="fundSeriesGroupID1" name="fundSeriesGroupID" class="td-by-series" type="radio" value="17" checked="checked"/>&nbsp;Investor & Premium
+            <br/>
+        
+        	<span style="display:none;"><label for ="fundSeriesGroupID2">Search prices in e-Series</label></span>
+            <input id="fundSeriesGroupID2" name="fundSeriesGroupID" class="td-by-series" type="radio" value="9"/>e-Series
+            <br/>
+         -->
+        
+        <span><input id="fundSeriesGroupID3" name="fundSeriesGroupID" class="td-by-series" type="radio" value="17" checked="checked"><label for="fundSeriesGroupID3">&nbsp;Investor &amp; Premium</label></span><span></span></div><div class="td-layout-grid3 td-floatleft td-margin-bottom-none"><input id="fundSeriesGroupID4" name="fundSeriesGroupID" class="td-by-series" type="radio" value="9"><label for="fundSeriesGroupID4">e-Series</label>
+	 </div>	
+    </div>
+   
+  </div>
+ 
+    <div class="td-layout-column td-layout-grid3">
+    
+      <div id="sectiontypefilter" class="">
+        <p class="td-margin-bottom-medium">
+          <strong>
+          By Category
+      
+          </strong>
+        </p>
+        <div class="td-layout-grid3 selectall">
+        
+        <span style="display:none;"><label for="allcategory">Search prices in all categories</label></span>  
+     	<input id="allcategory" type="checkbox" class="allcategory" checked="checked">
+			All
+		</div>
+	
+        
+			<div class="td-layout-grid3">
+				<span style="display:none;"><label for="sectorVOList0.associated1">Search prices in Money Market</label></span>
+				<input id="sectorVOList0.associated1" name="sectorVOList[0].associated" class="bycategory" type="checkbox" value="true" checked="checked"><input type="hidden" name="_sectorVOList[0].associated" value="on">
+				<span style="width:165px;word-break:break-all;">Money Market¹</span>
+				<input id="sectorVOList0.sectorTypeId" name="sectorVOList[0].sectorTypeId" type="hidden" value="5">
+				<input id="sectorVOList0.sectorDescription" name="sectorVOList[0].sectorDescription" type="hidden" value="Money Market&amp;sup1">
+			</div>
+		
+			<div class="td-layout-grid3">
+				<span style="display:none;"><label for="sectorVOList1.associated1">Search prices in Fixed income</label></span>
+				<input id="sectorVOList1.associated1" name="sectorVOList[1].associated" class="bycategory" type="checkbox" value="true" checked="checked"><input type="hidden" name="_sectorVOList[1].associated" value="on">
+				<span style="width:165px;word-break:break-all;">Fixed Income</span>
+				<input id="sectorVOList1.sectorTypeId" name="sectorVOList[1].sectorTypeId" type="hidden" value="3">
+				<input id="sectorVOList1.sectorDescription" name="sectorVOList[1].sectorDescription" type="hidden" value="Fixed Income">
+			</div>
+		
+			<div class="td-layout-grid3">
+				<span style="display:none;"><label for="sectorVOList2.associated1">Search prices in Balanced</label></span>
+				<input id="sectorVOList2.associated1" name="sectorVOList[2].associated" class="bycategory" type="checkbox" value="true" checked="checked"><input type="hidden" name="_sectorVOList[2].associated" value="on">
+				<span style="width:165px;word-break:break-all;">Balanced</span>
+				<input id="sectorVOList2.sectorTypeId" name="sectorVOList[2].sectorTypeId" type="hidden" value="1">
+				<input id="sectorVOList2.sectorDescription" name="sectorVOList[2].sectorDescription" type="hidden" value="Balanced">
+			</div>
+		
+			<div class="td-layout-grid3">
+				<span style="display:none;"><label for="sectorVOList3.associated1">Search prices in Canadian Equity</label></span>
+				<input id="sectorVOList3.associated1" name="sectorVOList[3].associated" class="bycategory" type="checkbox" value="true" checked="checked"><input type="hidden" name="_sectorVOList[3].associated" value="on">
+				<span style="width:165px;word-break:break-all;">Canadian Equity</span>
+				<input id="sectorVOList3.sectorTypeId" name="sectorVOList[3].sectorTypeId" type="hidden" value="2">
+				<input id="sectorVOList3.sectorDescription" name="sectorVOList[3].sectorDescription" type="hidden" value="Canadian Equity">
+			</div>
+		
+			<div class="td-layout-grid3">
+				<span style="display:none;"><label for="sectorVOList4.associated1">Search prices in US Equity</label></span>
+				<input id="sectorVOList4.associated1" name="sectorVOList[4].associated" class="bycategory" type="checkbox" value="true" checked="checked"><input type="hidden" name="_sectorVOList[4].associated" value="on">
+				<span style="width:165px;word-break:break-all;">US Equity</span>
+				<input id="sectorVOList4.sectorTypeId" name="sectorVOList[4].sectorTypeId" type="hidden" value="8">
+				<input id="sectorVOList4.sectorDescription" name="sectorVOList[4].sectorDescription" type="hidden" value="US Equity">
+			</div>
+		
+			<div class="td-layout-grid3">
+				<span style="display:none;"><label for="sectorVOList5.associated1">Search prices in Global Equity</label></span>
+				<input id="sectorVOList5.associated1" name="sectorVOList[5].associated" class="bycategory" type="checkbox" value="true" checked="checked"><input type="hidden" name="_sectorVOList[5].associated" value="on">
+				<span style="width:165px;word-break:break-all;">Global Equity</span>
+				<input id="sectorVOList5.sectorTypeId" name="sectorVOList[5].sectorTypeId" type="hidden" value="4">
+				<input id="sectorVOList5.sectorDescription" name="sectorVOList[5].sectorDescription" type="hidden" value="Global Equity">
+			</div>
+		
+			<div class="td-layout-grid3">
+				<span style="display:none;"><label for="sectorVOList6.associated1">Search prices in Sector</label></span>
+				<input id="sectorVOList6.associated1" name="sectorVOList[6].associated" class="bycategory" type="checkbox" value="true" checked="checked"><input type="hidden" name="_sectorVOList[6].associated" value="on">
+				<span style="width:165px;word-break:break-all;">Sector</span>
+				<input id="sectorVOList6.sectorTypeId" name="sectorVOList[6].sectorTypeId" type="hidden" value="6">
+				<input id="sectorVOList6.sectorDescription" name="sectorVOList[6].sectorDescription" type="hidden" value="Sector">
+			</div>
+		
+     
+      </div>
+      
+    </div>
+    
+
+     <div id="needtypefilter" class="td-layout-column td-layout-grid3">
+     
+    
+         <p class="td-margin-bottom-medium">
+          <strong>
+          By Need
+          </strong>
+        </p> 
+        
+        <div class="td-layout-grid3">
+        
+        <span style="display:none;"><label for="selectallNeed">Search prices by all needs</label></span>  
+     	<input id="selectallNeed" type="checkbox" class="selectallNeed" checked="checked">
+		All
+		</div>
+	    
+			<div class="td-layout-grid3">
+				<span style="display:none;"><label for="needTypeVOList0.associated1">Search prices by Cash Flow</label></span>
+				<input id="needTypeVOList0.associated1" name="needTypeVOList[0].associated" class="caseNeed" type="checkbox" value="true" checked="checked"><input type="hidden" name="_needTypeVOList[0].associated" value="on">
+				Cash Flow
+				<input id="needTypeVOList0.needTypeID" name="needTypeVOList[0].needTypeID" type="hidden" value="1">
+				<input id="needTypeVOList0.needDescription" name="needTypeVOList[0].needDescription" type="hidden" value="Cash Flow">
+			</div>
+		
+			<div class="td-layout-grid3">
+				<span style="display:none;"><label for="needTypeVOList1.associated1">Search prices by Low Volatility</label></span>
+				<input id="needTypeVOList1.associated1" name="needTypeVOList[1].associated" class="caseNeed" type="checkbox" value="true" checked="checked"><input type="hidden" name="_needTypeVOList[1].associated" value="on">
+				Low Volatility
+				<input id="needTypeVOList1.needTypeID" name="needTypeVOList[1].needTypeID" type="hidden" value="2">
+				<input id="needTypeVOList1.needDescription" name="needTypeVOList[1].needDescription" type="hidden" value="Low Volatility">
+			</div>
+		
+			<div class="td-layout-grid3">
+				<span style="display:none;"><label for="needTypeVOList2.associated1">Search prices by U.S. dollars</label></span>
+				<input id="needTypeVOList2.associated1" name="needTypeVOList[2].associated" class="caseNeed" type="checkbox" value="true" checked="checked"><input type="hidden" name="_needTypeVOList[2].associated" value="on">
+				U.S. $
+				<input id="needTypeVOList2.needTypeID" name="needTypeVOList[2].needTypeID" type="hidden" value="5">
+				<input id="needTypeVOList2.needDescription" name="needTypeVOList[2].needDescription" type="hidden" value="U.S. $">
+			</div>
+		
+      
+    </div>
+
+	<div class="td-layout-column td-layout-grid3">
+	   	      
+	        <p class="td-margin-bottom-none">
+	        <span style="display:none;"><label for="managerID">Search by manager</label></span> 
+	        <strong>By Manager</strong></p>         
+	   		<select id="managerID" name="managerID" style="max-width: 180px;" size="1">
+           		 <option value="">--Select--</option>
+				
+				 <option value="16095">Adnann Syed</option><option value="15968">Ana Cristina Piedrahita</option><option value="16056">Andrew Graham</option><option value="16028">Anish Chopra</option><option value="16092">Benjamin Gossack</option><option value="15449">Brian W.H. Berghuis</option><option value="15956">Charles Edwardes-Ker</option><option value="16043">Christopher Case</option><option value="16077">Damian Fernandes</option><option value="16031">David Mau</option><option value="15887">David McCulla</option><option value="16063">David N. Pearl</option><option value="15933">David Sykes</option><option value="16086">Deborah Lee Chang</option><option value="16048">Dino Vevaina</option><option value="15990">Doug Warwick</option><option value="16019">Elaine Lindhorst</option><option value="16080">Eric Sappenfield</option><option value="16021">Gaite Ali</option><option value="15518">Gary Baker</option><option value="15890">Geoff Wilson</option><option value="16042">Glenn Davis</option><option value="15755">Gregory A. McCrickard</option><option value="15822">Gregory Kocik</option><option value="15998">J. David Wagner</option><option value="16047">Jean Masson</option><option value="16078">Jennifer Nowski</option><option value="16094">Jimmy Xu</option><option value="16001">John F. Wakeman</option><option value="16084">John Tobin</option><option value="16096">Jonathan Lau</option><option value="16059">Joshua Spencer</option><option value="16087">Julien Palardy</option><option value="16034">Justin Flowerday</option><option value="16083">Kera Van Valen</option><option value="15749">Larry J. Puglia</option><option value="16082">Lilian Quah</option><option value="16044">Matthew Pauls</option><option value="16064">Michael A. Welhoelter</option><option value="15989">Michael Lough</option><option value="16024">Michelle Hegeman</option><option value="16023">Mike O'Brien</option><option value="16081">Olga Bylaard</option><option value="16097">Paul Danes</option><option value="16065">Paul Greene</option><option value="16075">Robert Pemberton</option><option value="15963">Ruchir Sharma</option><option value="16054">Shawna Millman</option><option value="16060">Taymour R. Tamaddon</option><option value="11789">TD Asset Management Inc.</option><option value="16016">Thomas George</option><option value="15858">Vishal Bhatia</option><option value="16027">Wilcox Chan</option><option value="16066">William J. Booth</option><option value="16062">William W.  Priest</option><option value="16089">Xin Chen</option><option value="16061">Yuriy Bodjov</option>
+				
+										
+			</select>         
+	      
+    </div>
+      <div class="td-layout-column td-layout-grid2 td-layout-column-last">
+      <p class="td-copy-align-right">
+          <a class="td-button td-button-secondary td-button-compact" href="#">
+            <span class="td-button-label" onclick="filter();">
+            Filter
+            </span>
+          </a>
+        </p>
+    </div>
+   </div>
+  </form>
+</div>
+
+                <div class="td-layout-row">
+                  <div class="td-layout-column td-layout-grid14 td-margin-top-medium td-layout-column-last td-layout-column-first">
+                <form id="frmSearch" class="td-clearBoth td-layout-grid14" action="fundProfileForm.form" method="post" target="_top">
+                <input type="hidden" value="" id="inputHidden">
+                      <input type="hidden" id="lang" name="lang" value="en">
+                      <input type="hidden" value="" id="sectorTypeIdList">
+                      <input type="hidden" value="id=&quot;productId&quot;/">
+                      <input type="hidden" value="id=&quot;fundCode&quot;/">
+                      <input type="hidden" value="" id="needTypeList">
+
+                      <div class="td-layout-row td-floatright" style="position:relative; z-index:9;">
+                        <a target="_blank" href="http://www.tdcanadatrust.com/products-services/investing/mutual-funds/index.jsp#what-does-td-offer" class="td-button td-button-secondary td-button-compact">
+                          <span class="td-button-label">
+                          Invest Now
+                          </span>
+                        </a>
+                      </div>
+                      <div class="td-tabs td-tabs-horizontal td-tabs-horizontal-primary td-tabs-dynamic td-margin-top-none {contentwrapper:'tabcontent1',equalizecontentheight:'false',fx:''}">
+                        <ul class="fundProfile">
+                          <li class="td-tabs-active">
+	                          <span id="priceSpan" class="td-tabs-label">
+		                            <a id="Price" href="#content1" onclick="setInputControlId('Price'); return false;"><span class="td-accesstext">You are on:</span>  
+		                              Prices
+		                            </a>
+	                            </span>
+                            </li>
+                          <li class="td-tabs-afteractive">
+	                          <span id="performanceSpan" class="td-tabs-label">
+		                            <a id="Performance" href="#content2" onclick="setInputControlId('Performance'); return false;">
+		                              Performance
+		                            </a>
+	                            </span>
+	                      </li>
+                          <li>
+                          <span id="distributionsSpan" class="td-tabs-label">
+                            <a id="Distributions" href="#content3" onclick="setInputControlId('Distributions'); return false;">
+                              Distributions
+                            </a>
+                            </span></li>
+                            
+                        </ul>
+                      </div>
+                      <div class="td-callout td-callout-secondary td-cs-primary td-tabs-content-callout-wrapper" id="tabcontent1">
+                        <div class="td-callout-content">
+                          <div class="td-tabs-content" id="content1" style="display: block; opacity: 1; ">
+
+
+
+
+
+
+
+
+  <h3 class="td-margin-top-medium"> Balanced</h3>
+  Price as of Dec 24, 2015<br>
+  
+  <table class="td-table td-table-border-row td-table-border-column td-table-stripe-row td-table-hover-row" width="100%">
+    <tbody>
+      <tr>
+        <th class="td-table-heading-top" scope="col" width="200">Fund Name</th>
+        <th class="td-table-heading-top" scope="col"> <a class="td-table-heading-sort tdam-price-sort" href="productId=&amp;orderBy=Nav&amp;sectorType=1">
+            <span>
+            $ NAV/Yield %
+            </span>
+            <img alt="(sortable)" src="/includes/styles/tables/sort-unsorted.gif">
+          </a>
+        </th>
+        <th class="td-table-heading-top" scope="col"> <a class="td-table-heading-sort tdam-price-sort" href="productId=&amp;orderBy=Change&amp;sectorType=1">
+            <span>
+            Change
+            </span><img alt="(sortable)" src="/includes/styles/tables/sort-unsorted.gif">
+          </a>
+        </th>
+      </tr>
+      
+
+        <tr class="td-table-row-last">
+          			<th class="td-table-row-last" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=2&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Balanced Growth Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">24.58</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-green">0.02&nbsp;(0.08%)</td>
+				
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-row-last">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB970 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-alt-row td-table-highlight-top">
+          			<th class="td-table-alt-row" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=3&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Balanced Income Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">14.33</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-green">0.02&nbsp;(0.14%)</td>
+				
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-alt-row td-table-highlight-bottom">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB160 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-row-last">
+          			<th class="td-table-row-last" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=2099&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Balanced Index Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">13.76</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-green">0.02&nbsp;(0.15%)</td>
+				
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-row-last">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB965 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-alt-row td-table-highlight-top">
+          			<th class="td-table-alt-row" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=412&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Diversified Monthly Income Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">22.03</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-green">0.03&nbsp;(0.14%)</td>
+				
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-alt-row td-table-highlight-bottom">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB159 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-row-last">
+          			<th class="td-table-row-last" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=414&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Dividend Income Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">32.69</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-green">0.08&nbsp;(0.25%)</td>
+				
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-row-last">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB627 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-alt-row td-table-highlight-top">
+          			<th class="td-table-alt-row" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=2100&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Monthly Income Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">18.94</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-green">0.05&nbsp;(0.26%)</td>
+				
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-alt-row td-table-highlight-bottom">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB622 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-row-last">
+          			<th class="td-table-row-last" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=6404&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD U.S. Monthly Income Fund (US$) - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">12.97</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-red">-0.01&nbsp;(-0.08%)</td>
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-row-last">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB2460 
+              
+            </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+  <h3 class="td-margin-top-medium"> Canadian Equity</h3>
+  Price as of Dec 24, 2015<br>
+  
+  <table class="td-table td-table-border-row td-table-border-column td-table-stripe-row td-table-hover-row" width="100%">
+    <tbody>
+      <tr>
+        <th class="td-table-heading-top" scope="col" width="200">Fund Name</th>
+        <th class="td-table-heading-top" scope="col"> <a class="td-table-heading-sort tdam-price-sort" href="productId=&amp;orderBy=Nav&amp;sectorType=2">
+            <span>
+            $ NAV/Yield %
+            </span>
+            <img alt="(sortable)" src="/includes/styles/tables/sort-unsorted.gif">
+          </a>
+        </th>
+        <th class="td-table-heading-top" scope="col"> <a class="td-table-heading-sort tdam-price-sort" href="productId=&amp;orderBy=Change&amp;sectorType=2">
+            <span>
+            Change
+            </span><img alt="(sortable)" src="/includes/styles/tables/sort-unsorted.gif">
+          </a>
+        </th>
+      </tr>
+      
+
+        <tr class="td-table-row-last">
+          			<th class="td-table-row-last" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=4&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Canadian Blue Chip Equity Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">33.12</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-green">0.06&nbsp;(0.18%)</td>
+				
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-row-last">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB968 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-alt-row td-table-highlight-top">
+          			<th class="td-table-alt-row" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=6&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Canadian Equity Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">30.86</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-green">0.04&nbsp;(0.13%)</td>
+				
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-alt-row td-table-highlight-bottom">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB161 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-row-last">
+          			<th class="td-table-row-last" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=7&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Canadian Index Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">20.40</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-green">0.04&nbsp;(0.20%)</td>
+				
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-row-last">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB216 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-alt-row td-table-highlight-top">
+          			<th class="td-table-alt-row" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=422&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Canadian Small-Cap Equity Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">31.91</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-green">0.14&nbsp;(0.44%)</td>
+				
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-alt-row td-table-highlight-bottom">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB628 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-row-last">
+          			<th class="td-table-row-last" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=31&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Canadian Value Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">21.68</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-green">0.03&nbsp;(0.14%)</td>
+				
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-row-last">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB643 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-alt-row td-table-highlight-top">
+          			<th class="td-table-alt-row" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=11&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Dividend Growth Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">68.43</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-green">0.14&nbsp;(0.20%)</td>
+				
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-alt-row td-table-highlight-bottom">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB972 
+              
+            </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+  <h3 class="td-margin-top-medium"> Fixed Income</h3>
+  Price as of Dec 24, 2015<br>
+  
+  <table class="td-table td-table-border-row td-table-border-column td-table-stripe-row td-table-hover-row" width="100%">
+    <tbody>
+      <tr>
+        <th class="td-table-heading-top" scope="col" width="200">Fund Name</th>
+        <th class="td-table-heading-top" scope="col"> <a class="td-table-heading-sort tdam-price-sort" href="productId=&amp;orderBy=Nav&amp;sectorType=3">
+            <span>
+            $ NAV/Yield %
+            </span>
+            <img alt="(sortable)" src="/includes/styles/tables/sort-unsorted.gif">
+          </a>
+        </th>
+        <th class="td-table-heading-top" scope="col"> <a class="td-table-heading-sort tdam-price-sort" href="productId=&amp;orderBy=Change&amp;sectorType=3">
+            <span>
+            Change
+            </span><img alt="(sortable)" src="/includes/styles/tables/sort-unsorted.gif">
+          </a>
+        </th>
+      </tr>
+      
+
+        <tr class="td-table-row-last">
+          			<th class="td-table-row-last" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=5&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Canadian Bond Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">14.07</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-green">0.03&nbsp;(0.21%)</td>
+				
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-row-last">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB162 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-alt-row td-table-highlight-top">
+          			<th class="td-table-alt-row" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=4816&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Canadian Bond Index Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">11.52</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-green">0.02&nbsp;(0.17%)</td>
+				
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-alt-row td-table-highlight-bottom">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB966 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-row-last">
+          			<th class="td-table-row-last" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=6287&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Canadian Core Plus Bond Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">11.69</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-green">0.02&nbsp;(0.17%)</td>
+				
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-row-last">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB694 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-alt-row td-table-highlight-top">
+          			<th class="td-table-alt-row" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=16&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Global Bond Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">10.16</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-green">0.03&nbsp;(0.30%)</td>
+				
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-alt-row td-table-highlight-bottom">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB640 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-row-last">
+          			<th class="td-table-row-last" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=2101&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD High Yield Bond Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">6.00</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-green">0.01&nbsp;(0.17%)</td>
+				
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-row-last">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB626 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-alt-row td-table-highlight-top">
+          			<th class="td-table-alt-row" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=420&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Mortgage Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">59.60</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-green">0.02&nbsp;(0.03%)</td>
+				
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-alt-row td-table-highlight-bottom">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB621 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-row-last">
+          			<th class="td-table-row-last" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=25&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Real Return Bond Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">16.15</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-green">0.06&nbsp;(0.37%)</td>
+				
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-row-last">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB646 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-alt-row td-table-highlight-top">
+          			<th class="td-table-alt-row" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=28&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Short Term Bond Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">9.90</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+				
+					<td class="td-copy-sub">0.00&nbsp;(0.00%)</td>
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-alt-row td-table-highlight-bottom">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB967 
+              
+            </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+  <h3 class="td-margin-top-medium"> Global Equity</h3>
+  Price as of Dec 24, 2015<br>
+  
+  <table class="td-table td-table-border-row td-table-border-column td-table-stripe-row td-table-hover-row" width="100%">
+    <tbody>
+      <tr>
+        <th class="td-table-heading-top" scope="col" width="200">Fund Name</th>
+        <th class="td-table-heading-top" scope="col"> <a class="td-table-heading-sort tdam-price-sort" href="productId=&amp;orderBy=Nav&amp;sectorType=4">
+            <span>
+            $ NAV/Yield %
+            </span>
+            <img alt="(sortable)" src="/includes/styles/tables/sort-unsorted.gif">
+          </a>
+        </th>
+        <th class="td-table-heading-top" scope="col"> <a class="td-table-heading-sort tdam-price-sort" href="productId=&amp;orderBy=Change&amp;sectorType=4">
+            <span>
+            Change
+            </span><img alt="(sortable)" src="/includes/styles/tables/sort-unsorted.gif">
+          </a>
+        </th>
+      </tr>
+      
+
+        <tr class="td-table-row-last">
+          			<th class="td-table-row-last" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=14&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              Epoch European Equity Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">23.54</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-red">-0.01&nbsp;(-0.04%)</td>
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-row-last">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB649 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-alt-row td-table-highlight-top">
+          			<th class="td-table-alt-row" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=17&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              Epoch Global Equity Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">21.46</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-red">-0.03&nbsp;(-0.14%)</td>
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-alt-row td-table-highlight-bottom">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB641 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-row-last">
+          			<th class="td-table-row-last" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=6258&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              Epoch Global Shareholder Yield Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">11.18</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-red">-0.01&nbsp;(-0.09%)</td>
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-row-last">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB231 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-alt-row td-table-highlight-top">
+          			<th class="td-table-alt-row" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=1&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Asian Growth Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">17.55</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-red">-0.04&nbsp;(-0.23%)</td>
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-alt-row td-table-highlight-bottom">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB642 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-row-last">
+          			<th class="td-table-row-last" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=12&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Emerging Markets Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">16.98</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-red">-0.04&nbsp;(-0.24%)</td>
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-row-last">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB638 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-alt-row td-table-highlight-top">
+          			<th class="td-table-alt-row" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=1979&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD European Index Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">10.27</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-green">0.01&nbsp;(0.10%)</td>
+				
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-alt-row td-table-highlight-bottom">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB659 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-row-last">
+          			<th class="td-table-row-last" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=6418&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Global Low Volatility Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">17.06</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-red">-0.03&nbsp;(-0.18%)</td>
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-row-last">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB2540 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-alt-row td-table-highlight-top">
+          			<th class="td-table-alt-row" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=6240&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD International Growth Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">11.52</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-red">-0.02&nbsp;(-0.17%)</td>
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-alt-row td-table-highlight-bottom">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB201 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-row-last">
+          			<th class="td-table-row-last" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=1869&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD International Index Currency Neutral Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">7.00</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-red">-0.03&nbsp;(-0.43%)</td>
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-row-last">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB656 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-alt-row td-table-highlight-top">
+          			<th class="td-table-alt-row" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=1779&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD International Index Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">12.62</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-red">-0.02&nbsp;(-0.16%)</td>
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-alt-row td-table-highlight-bottom">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB964 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-row-last">
+          			<th class="td-table-row-last" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=19&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Japanese Growth Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">8.83</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-red">-0.11&nbsp;(-1.23%)</td>
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-row-last">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB650 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-alt-row td-table-highlight-top">
+          			<th class="td-table-alt-row" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=1980&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Japanese Index Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">10.85</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-red">-0.12&nbsp;(-1.09%)</td>
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-alt-row td-table-highlight-bottom">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB658 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-row-last">
+          			<th class="td-table-row-last" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=3139&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Latin American Growth Fund (US$) - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">12.21</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-red">-0.01&nbsp;(-0.08%)</td>
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-row-last">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB227 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-alt-row td-table-highlight-top">
+          			<th class="td-table-alt-row" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=20&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Latin American Growth Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">16.92</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-red">-0.02&nbsp;(-0.12%)</td>
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-alt-row td-table-highlight-bottom">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB651 
+              
+            </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+  <h3 class="td-margin-top-medium"> Money Market¹</h3>
+  Price as of Dec 24, 2015<br>
+  
+  <table class="td-table td-table-border-row td-table-border-column td-table-stripe-row td-table-hover-row" width="100%">
+    <tbody>
+      <tr>
+        <th class="td-table-heading-top" scope="col" width="200">Fund Name</th>
+        <th class="td-table-heading-top" scope="col"> <a class="td-table-heading-sort tdam-price-sort" href="productId=&amp;orderBy=Nav&amp;sectorType=5">
+            <span>
+            $ NAV/Yield %
+            </span>
+            <img alt="(sortable)" src="/includes/styles/tables/sort-unsorted.gif">
+          </a>
+        </th>
+        <th class="td-table-heading-top" scope="col"> <a class="td-table-heading-sort tdam-price-sort" href="productId=&amp;orderBy=Change&amp;sectorType=5">
+            <span>
+            Change
+            </span><img alt="(sortable)" src="/includes/styles/tables/sort-unsorted.gif">
+          </a>
+        </th>
+      </tr>
+      
+
+        <tr class="td-table-row-last">
+          			<th class="td-table-row-last" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=9&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Canadian Money Market Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">0.20</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+				
+					<td class="td-copy-sub">0.00&nbsp;(0.00%)</td>
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-row-last">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB164 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-alt-row td-table-highlight-top">
+          			<th class="td-table-alt-row" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=8&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Canadian T-Bill Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">0.09</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+				
+					<td class="td-copy-sub">0.00&nbsp;(0.00%)</td>
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-alt-row td-table-highlight-bottom">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB167 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-row-last">
+          			<th class="td-table-row-last" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=1789&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Premium Money Market Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">0.42</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+				
+					<td class="td-copy-sub">0.00&nbsp;(0.00%)</td>
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-row-last">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB165 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-alt-row td-table-highlight-top">
+          			<th class="td-table-alt-row" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=30&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD U.S. Money Market Fund (US$) - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">0.30</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-green">0.01&nbsp;(3.45%)</td>
+				
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-alt-row td-table-highlight-bottom">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB166 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-row-last">
+          			<th class="td-table-row-last" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=6189&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD U.S. Money Market Fund (US$) - P
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">0.30</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-green">0.01&nbsp;(3.45%)</td>
+				
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-row-last">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB169 
+              
+            </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+  <h3 class="td-margin-top-medium"> Sector</h3>
+  Price as of Dec 24, 2015<br>
+  
+  <table class="td-table td-table-border-row td-table-border-column td-table-stripe-row td-table-hover-row" width="100%">
+    <tbody>
+      <tr>
+        <th class="td-table-heading-top" scope="col" width="200">Fund Name</th>
+        <th class="td-table-heading-top" scope="col"> <a class="td-table-heading-sort tdam-price-sort" href="productId=&amp;orderBy=Nav&amp;sectorType=6">
+            <span>
+            $ NAV/Yield %
+            </span>
+            <img alt="(sortable)" src="/includes/styles/tables/sort-unsorted.gif">
+          </a>
+        </th>
+        <th class="td-table-heading-top" scope="col"> <a class="td-table-heading-sort tdam-price-sort" href="productId=&amp;orderBy=Change&amp;sectorType=6">
+            <span>
+            Change
+            </span><img alt="(sortable)" src="/includes/styles/tables/sort-unsorted.gif">
+          </a>
+        </th>
+      </tr>
+      
+
+        <tr class="td-table-row-last">
+          			<th class="td-table-row-last" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=13&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Energy Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">17.79</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-red">-0.08&nbsp;(-0.45%)</td>
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-row-last">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB647 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-alt-row td-table-highlight-top">
+          			<th class="td-table-alt-row" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=3136&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Entertainment &amp; Communications Fund (US$) - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">42.72</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-red">-0.10&nbsp;(-0.23%)</td>
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-alt-row td-table-highlight-bottom">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB223 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-row-last">
+          			<th class="td-table-row-last" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=1791&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Entertainment and Communications Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">59.18</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-red">-0.16&nbsp;(-0.27%)</td>
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-row-last">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB652 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-alt-row td-table-highlight-top">
+          			<th class="td-table-alt-row" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=3137&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Health Sciences Fund (US$) - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">49.45</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-green">0.02&nbsp;(0.04%)</td>
+				
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-alt-row td-table-highlight-bottom">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB225 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-row-last">
+          			<th class="td-table-row-last" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=819&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Health Sciences Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">68.51</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-green">0.01&nbsp;(0.01%)</td>
+				
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-row-last">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB976 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-alt-row td-table-highlight-top">
+          			<th class="td-table-alt-row" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=24&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Precious Metals Fund  - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">25.59</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-green">0.44&nbsp;(1.75%)</td>
+				
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-alt-row td-table-highlight-bottom">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB648 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-row-last">
+          			<th class="td-table-row-last" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=26&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Resource Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">15.93</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-red">-0.04&nbsp;(-0.25%)</td>
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-row-last">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB644 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-alt-row td-table-highlight-top">
+          			<th class="td-table-alt-row" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=3140&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Science &amp; Technology Fund (US$) - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">39.49</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-red">-0.03&nbsp;(-0.08%)</td>
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-alt-row td-table-highlight-bottom">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB224 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-row-last">
+          			<th class="td-table-row-last" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=27&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Science &amp; Technology Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">54.71</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-red">-0.06&nbsp;(-0.11%)</td>
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-row-last">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB645 
+              
+            </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+  <h3 class="td-margin-top-medium"> US Equity</h3>
+  Price as of Dec 24, 2015<br>
+  
+  <table class="td-table td-table-border-row td-table-border-column td-table-stripe-row td-table-hover-row" width="100%">
+    <tbody>
+      <tr>
+        <th class="td-table-heading-top" scope="col" width="200">Fund Name</th>
+        <th class="td-table-heading-top" scope="col"> <a class="td-table-heading-sort tdam-price-sort" href="productId=&amp;orderBy=Nav&amp;sectorType=8">
+            <span>
+            $ NAV/Yield %
+            </span>
+            <img alt="(sortable)" src="/includes/styles/tables/sort-unsorted.gif">
+          </a>
+        </th>
+        <th class="td-table-heading-top" scope="col"> <a class="td-table-heading-sort tdam-price-sort" href="productId=&amp;orderBy=Change&amp;sectorType=8">
+            <span>
+            Change
+            </span><img alt="(sortable)" src="/includes/styles/tables/sort-unsorted.gif">
+          </a>
+        </th>
+      </tr>
+      
+
+        <tr class="td-table-row-last">
+          			<th class="td-table-row-last" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=6410&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              Epoch U.S. Large-Cap Value Fund (US$) - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">13.03</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-red">-0.02&nbsp;(-0.15%)</td>
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-row-last">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB2050 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-alt-row td-table-highlight-top">
+          			<th class="td-table-alt-row" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=6179&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              Epoch U.S. Large-Cap Value Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">18.05</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-red">-0.03&nbsp;(-0.17%)</td>
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-alt-row td-table-highlight-bottom">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB678 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-row-last">
+          			<th class="td-table-row-last" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=1978&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Dow Jones Industrial Average Index Fund (US$) - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">11.16</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-red">-0.04&nbsp;(-0.36%)</td>
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-row-last">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB218 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-alt-row td-table-highlight-top">
+          			<th class="td-table-alt-row" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=1977&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Dow Jones Industrial Average Index Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">15.46</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-red">-0.06&nbsp;(-0.39%)</td>
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-alt-row td-table-highlight-bottom">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB657 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-row-last">
+          			<th class="td-table-row-last" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=3326&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD Nasdaq® Index Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">10.83</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-red">-0.01&nbsp;(-0.09%)</td>
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-row-last">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB981 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-alt-row td-table-highlight-top">
+          			<th class="td-table-alt-row" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=4878&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD North American Dividend Fund (US$) - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">16.45</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-red">-0.03&nbsp;(-0.18%)</td>
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-alt-row td-table-highlight-bottom">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB228 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-row-last">
+          			<th class="td-table-row-last" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=424&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD North American Dividend Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">22.79</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-red">-0.05&nbsp;(-0.22%)</td>
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-row-last">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB619 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-alt-row td-table-highlight-top">
+          			<th class="td-table-alt-row" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=3141&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD U.S. Blue Chip Equity Fund (US$) - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">24.33</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-red">-0.04&nbsp;(-0.16%)</td>
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-alt-row td-table-highlight-bottom">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB220 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-row-last">
+          			<th class="td-table-row-last" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=818&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD U.S. Blue Chip Equity Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">33.71</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-red">-0.06&nbsp;(-0.18%)</td>
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-row-last">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB977 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-alt-row td-table-highlight-top">
+          			<th class="td-table-alt-row" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=1868&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD U.S. Index Currency Neutral Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">13.44</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-red">-0.02&nbsp;(-0.15%)</td>
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-alt-row td-table-highlight-bottom">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB655 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-row-last">
+          			<th class="td-table-row-last" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=29&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD U.S. Index Fund (US$) - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">16.23</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-red">-0.03&nbsp;(-0.18%)</td>
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-row-last">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB217 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-alt-row td-table-highlight-top">
+          			<th class="td-table-alt-row" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=1981&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD U.S. Index Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">22.48</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-red">-0.05&nbsp;(-0.22%)</td>
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-alt-row td-table-highlight-bottom">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB661 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-row-last">
+          			<th class="td-table-row-last" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=3142&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD U.S. Mid-Cap Growth Fund (US$) - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">57.04</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+				
+					<td class="td-copy-sub">0.00&nbsp;(0.00%)</td>
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-row-last">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB221 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-alt-row td-table-highlight-top">
+          			<th class="td-table-alt-row" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=23&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD U.S. Mid-Cap Growth Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">79.02</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-red">-0.03&nbsp;(-0.04%)</td>
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-alt-row td-table-highlight-bottom">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB974 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-row-last">
+          			<th class="td-table-row-last" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=410&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD U.S. Quantitative Equity Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">17.96</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-red">-0.04&nbsp;(-0.22%)</td>
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-row-last">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB677 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-alt-row td-table-highlight-top">
+          			<th class="td-table-alt-row" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=3143&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD U.S. Small-Cap Equity Fund (US$) - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">24.38</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-green">0.02&nbsp;(0.08%)</td>
+				
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-alt-row td-table-highlight-bottom">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB222 
+              
+            </td>
+        </tr>
+      
+
+        <tr class="td-table-row-last">
+          			<th class="td-table-row-last" scope="row" rowspan="2">
+           
+            <a class="td-link-standalone td-link-standalone-secondary" href="fundDetails.form?fundId=1788&amp;prodGroupId=1&amp;lang=en&amp;site=TDCT">
+              TD U.S. Small-Cap Equity Fund - I
+            </a>
+          </th>
+          
+            
+              <td class="td-copy-sub">33.78</td>
+            
+            
+          
+          
+            
+				
+				
+				
+				
+					<td class="td-copy-sub td-copy-green">0.03&nbsp;(0.09%)</td>
+				
+				
+				
+			  
+            
+            
+          
+        </tr>
+  
+<tr class="td-table-row-last">
+          
+          <td class="td-copy-sub td-profile-fund-code" colspan="2">
+               Fund Code-TDB653 
+              
+            </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+<div class="td-layout-row">
+<div class="td-layout-column td-layout-grid11">
+<p class="td-copy-sub td-copy-grey td-margin-bottom-small">
+	
+</p><p class="td-copy-sub td-copy-grey"><sup>1</sup>This is an annualized historical yield based on the seven day period ended on the date indicated and does not represent an actual one year return.<br><br>A 2% early redemption fee may apply for units redeemed within 7 days of purchase (except money market funds).  </p>
+	<p class="td-copy-sub td-copy-grey td-margin-bottom-small">	Effective December 1, 2015, TD Asset Management Inc. (TDAM) will no longer accept additional investments in TD Japanese Index Fund, TD Japanese Growth Fund, TD FundSmart Managed Maximum Equity Growth Portfolio, TD U.S. Equity Currency Neutral Portfolio and TD Canadian T-Bill Fund. TDAM plans to terminate the operations of these funds on or about April 15, 2016. The termination of TD Canadian T-Bill Fund is subject to securityholder approval. Subject to securityholder and regulatory approval, TDAM has proposed to merge on or about April 15, 2016, the TD Energy Fund and TD Precious Metals Fund into the TD Resource Fund, the TD Latin American Growth Fund into the TD Emerging Markets Fund, the TD Mortgage Fund into the TD Short Term Bond Fund, the TD Canadian Blue Chip Equity Fund into the TD Canadian Equity Fund, the TD FundSmart Managed Income Portfolio into the TD Managed Income Portfolio, and TD Canadian Blue Chip Equity Class into the TD Canadian Equity Class. Please see the <a href="http://td.mediaroom.com/2015-10-23-TD-Asset-Management-Inc-to-streamline-its-mutual-funds-line-up" target="_blank">press release</a> for more details.<br><br></p>
+	<p class="td-copy-sub td-copy-grey"> <a target="_blank" href="http://www.td.com/popup/legal/index-inc.jsp#TD_Asset_Management">Important Mutual Fund Information</a>		</p>
+	<p class="td-copy-sub td-copy-grey">	</p>
+	<p class="td-copy-sub td-copy-grey">TD Mutual Funds are qualified for sale in the provinces and territories of Canada. This site does not constitute an offer or solicitation to residents of the US or the UK or anyone in any other jurisdiction in which such an offer or solicitation is not authorized or to any person to whom it is unlawful to make such a solicitation.</p>
+	<p class="td-copy-sub td-copy-grey">Commissions, trailing commissions, management fees and expenses all may be associated with mutual fund investments. Please read the fund facts and prospectus, which contains detailed investment information, before investing. The indicated rates of return (other than for each money market fund) are the historical annual compounded total returns for the period indicated including changes in unit value and reinvestment of distributions. The indicated rates of return for each money market fund is an annualized historical yield based on the seven-day period ended as indicated and annualized in the case of effective yield by compounding the seven day return and does not represent an actual one year return. The indicated rates of return do not take into account sales, redemption, distribution or optional charges or income taxes payable by any unit holder that would have reduced returns. Mutual funds are not covered by the Canada Deposit Insurance Corporation or by any other government deposit insurer and are not guaranteed or insured. Their values change frequently. There can be no assurances that a money market fund will be able to maintain its net asset value per unit at a constant amount or that the full amount of your investment will be returned to you. Past performance may not be repeated.</p>	
+
+</div></div>
+
+</div>
+                          <div class="td-tabs-content" id="content2" style="display: none; ">
+                          </div>
+                          <div class="td-tabs-content" id="content3" style="display: none; ">
+                          </div>
+                          <div class="td-tabs-content" id="content4" style="display: none; ">
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End .td-layout-row -->
+        
+      </div>
+    </div>
+    <!-- End #td-layout-contentarea -->
+    
+  </div>
+  <!-- End #td-container -->
+  
+  <!--****************************************
+  Footer
+****************************************-->
+  
+  <!-- End #td-layout-footer -->
+  
+</div>
+<!-- End #td-wrapper -->
+
+
+</body></html>
