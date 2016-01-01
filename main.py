@@ -1,7 +1,17 @@
+from Crawling_Engine import Engine
 from insert import Database
+from analyser import Analyser
 
-conn = Database(host="localhost", user="root", password="1234", database="Traning")
-conn.insert("Balanced",fund_name="INcome",code="TDB777",price=24.00,price_change=0.02,percent_change=0.08)
 
+if __name__ == "__main__":
+	crawler = Engine()
+	crawler.fetch()
+
+	conn = Database(host="localhost", user="root", password="1234", database="Traning")
+
+	anal=Analyser(conn)
+	anal.process()
+
+	crawler.close()
 
 
