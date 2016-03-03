@@ -1,4 +1,4 @@
-<h1>Funds-Checker</h1>
+<h1>Funds Crawler</h1>
 
 A Python 3 based Web-Crawler/Scraper for TD Mutual Funds Website (a JS rendered website). (https://www.tdcanadatrust.com/products-services/investing/mutual-funds/fund_prices.jsp)
 
