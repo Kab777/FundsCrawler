@@ -9,7 +9,7 @@ Sample data is avaliable.
 
 Crawling:
 
-Using [**Selenium webdriver**](https://pypi.python.org/pypi/selenium) and [**PhantomJS**](http://phantomjs.org/) to create headless browser, making javascript rendered soucecode avaliable for crawling.
+Using [**Selenium webdriver**](https://pypi.python.org/pypi/selenium) and [**PhantomJS**](http://phantomjs.org/) to create headless browser, making javascript rendered source code avaliable for crawling.
 
 Parsing:
 
