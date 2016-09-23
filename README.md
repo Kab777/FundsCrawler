@@ -1,6 +1,8 @@
 <h1>Funds Crawler</h1>
 
-A Python 3 based Web-Crawler/Scraper for TD Mutual Funds Website (a JS rendered website). (https://www.tdcanadatrust.com/products-services/investing/mutual-funds/fund_prices.jsp)
+online version available at here: http://junyuzhou.com/funds.html
+
+A Python 3 based Web-Crawler/Scraper for TD Mutual Funds Website (a JS rendered website). https://www.tdcanadatrust.com/products-services/investing/mutual-funds/fund_prices.jsp
 
 Including Crawling, Parsing, Inserting into database process.
 
