@@ -2,6 +2,8 @@
 
 online version available at here: http://junyuzhou.com/funds.html
 
+As of Sep 23, there are **673** unique users registered for daily investment notification.
+
 A Python 3 based Web-Crawler/Scraper for TD Mutual Funds Website (a JS rendered website). https://www.tdcanadatrust.com/products-services/investing/mutual-funds/fund_prices.jsp
 
 Including Crawling, Parsing, Inserting into database process.
