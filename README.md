@@ -1,4 +1,4 @@
-<h1>Funds Crawler</h1>
+<h1>Funds Crawler/Suggester</h1>
 
 online version available at here: http://junyuzhou.com/funds.html
 
