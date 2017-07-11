@@ -1,4 +1,13 @@
-<h1>Funds Crawler/Suggester</h1>
+<h1>Funds Bot</h1>
+![](/fundsC.png?raw=true "Logo")
+
+| Param  | Type | Description |
+| --- | --- | --- |
+| code | text (255)  | The id of the fund you wish to search for. (ex: TDB970)|
+| type | text (255)  | The type of the afund you wish to search for. (ex: Balanced)|
+
+
+[**Run example**](http://junyuzhou.com/api/public/fundPrice?code=TDB970&type=Balanced)
 
 online version available at here: http://junyuzhou.com/funds.html
 
