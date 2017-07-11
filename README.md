@@ -1,5 +1,7 @@
 <h1>Funds Bot</h1>
-![](/fundsC.png?raw=true "Logo")
+
+![](https://github.com/Kab777/FundsCrawler/blob/master/Logo/fundsC.png)
+
 
 | Param  | Type | Description |
 | --- | --- | --- |
